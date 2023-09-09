@@ -1,0 +1,7 @@
+#imgchatbot{
+    width: 3%;
+    position: fixed;
+    bottom: 20px; /* Adjust this value to set the desired distance from the top */
+    right: 20px;
+    padding: 1px;
+}
