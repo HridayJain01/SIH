@@ -1,29 +1,29 @@
-import React from "react";
-import "./chatbot.css";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Chatbot, Message, MessageText } from 'react-chatbot-kit';
 
-const Chatbot = () => {
+
+const config = {
+  initialMessages: [Message.text('Hello! How can I assist you today?', 'bot')],
+};
+
+
+const messageHandler = (message) => {
+  if (message.toLowerCase().includes('emergency')) {
+    return Message.text(
+      "I'm really sorry to hear that you're in an emergency situation.  Reporting to the nearest authorities...",
+      'bot'
+    );
+  } else {
+    return Message.text("I can provide information and resources related to women's safety. How can I assist you?", 'bot');
+  }
+};
+
+const ChatbotComponent = () => {
   return (
-    <div>
-      <Link to="/chatbot1">
-        <img
-          id="imgchatbot"
-          src="https://cdn-icons-png.flaticon.com/512/2548/2548881.png"
-          alt="chatbot"
-        />
-      </Link>
+    <div className="chatbot">
+      <Chatbot config={config} messageHandler={messageHandler}>
+        <Message customComponent={MessageText} />
+      </Chatbot>
     </div>
   );
 };
-
-export default Chatbot;
-
-{
-  /* <div>
-      <img
-        id="imgchatbot"
-        src="https://cdn-icons-png.flaticon.com/512/2548/2548881.png"
-        alt="chatbot"
-      />
-    </div> */
-}

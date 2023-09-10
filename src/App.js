@@ -13,11 +13,14 @@ const App = () => {
     <div>
       <Chatbot />
       <Navi />
+      <EmergencyButton />
       <Routes>
         <Route path="/home" Component={Home} />
         <Route path="/service" Component={Service} />
         <Route path="/register" Component={Register} />
-        <Route path="/chatbot1" Component={Chatbot1} />
+        <Route path="/chatbot" Component={Chatbot} />
+        <Route path="/emergencybutton" Component={EmergencyButton} />
+
       </Routes>
     </div>
   );

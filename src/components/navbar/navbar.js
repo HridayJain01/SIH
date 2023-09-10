@@ -25,7 +25,7 @@ const Navi = () => {
           </div>
           <div>
             <Link to="/register" className="italic text-white no-underline">
-              register
+              Register
             </Link>
           </div>
         </div>
