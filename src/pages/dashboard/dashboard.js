@@ -1,7 +1,7 @@
 import React from "react";
 
-function Service() {
+function Dashboard() {
   return <div>Service</div>;
 }
 
-export default Service;
+export default Dashboard;

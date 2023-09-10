@@ -1,0 +1,20 @@
+.emergency-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .emergency-button button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .emergency-button button:focus {
+    outline: none;
+  }
